@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arabian vACC ATC Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="https://arabian-vacc.com/assets/img/favicon.ico">
+  <meta name="description" content="Book ATC slots and view real-time controller schedules for Arabian vACC.">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <a href="https://arabian-vacc.com">
+        <img src="https://arabian-vacc.com/assets/img/logo.png" alt="Arabian vACC Logo" class="logo">
+      </a>
+      <nav>
+        <a href="https://arabian-vacc.com">Home</a>
+        <a href="https://library.arabian-vacc.com">Library</a>
+        <a href="#booking-section">Book ATC</a>
+        <a href="#schedule-section">Schedule</a>
+      </nav>
+      <div id="user-info">
+        <button id="login-btn">Login with CID</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="booking-section">
+      <h2>Book ATC Slot</h2>
+      <form id="booking-form">
+        <label for="position">Position:</label>
+        <input type="text" id="position" name="position" required />
+
+        <label for="start-time">Start Time:</label>
+        <input type="datetime-local" id="start-time" name="start-time" required />
+
+        <label for="end-time">End Time:</label>
+        <input type="datetime-local" id="end-time" name="end-time" required />
+
+        <button type="submit">Book Slot</button>
+      </form>
+    </section>
+
+    <section id="schedule-section">
+      <h2>ATC Schedule</h2>
+      <div id="schedule-list">
+        <!-- Schedule items will be dynamically added here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Arabian vACC | <a href="https://arabian-vacc.com">arabian-vacc.com</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
