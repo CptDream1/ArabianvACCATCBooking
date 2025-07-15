@@ -15,11 +15,22 @@ document.getElementById("booking-form").addEventListener("submit", (e) => {
 });
 
 function loadSchedule() {
-  // TODO: Replace this mock data with actual API call
   const scheduleData = [
     { cid: "1234567", position: "OMDB_TWR", start: "2025-07-15T16:00", end: "2025-07-15T18:00" },
     { cid: "7654321", position: "OERK_APP", start: "2025-07-16T14:00", end: "2025-07-16T16:00" }
   ];
+
+  const list = document.getElementById("schedule-list");
+  list.innerHTML = "";
+
+  scheduleData.forEach(slot => {
+    const item = document.createElement("div");
+    item.className = "schedule-item";
+    item.innerHTML = `<strong>${slot.position}</strong> — ${slot.start} to ${slot.end}<br><small>CID: ${slot.cid}</small>`;
+    list.appendChild(item);
+  });
+}
+
 
   const list = document.getElementById("schedule-list");
   list.innerHTML = "";
